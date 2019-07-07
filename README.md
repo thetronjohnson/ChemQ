@@ -12,4 +12,4 @@ Future developments may include:
 * comparing two molecules
 * identifying a compound with a similar structure( present in the dataset )
 
-The project is still in its inital stage. Feel free to help with suggestions and other contibutions
+The project is still in its inital stage. Feel free to help with suggestions and contibutions

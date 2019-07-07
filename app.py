@@ -3,7 +3,6 @@ from rdkit.Chem import Draw
 from rdkit.Chem.Draw import DrawingOptions
 import pandas as pd
 import os
-from werkzeug.utils import secure_filename
 from flask import Flask, render_template, url_for, send_from_directory,request, redirect
 
 BASE_DIR = os.getcwd()

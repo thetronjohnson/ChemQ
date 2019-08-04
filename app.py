@@ -13,7 +13,7 @@ ALLOWED_EXTENSIONS = set(['svg','png'])
 app = Flask(__name__)
 app.config['MEDIA_FOLDER'] = MEDIA_FOLDER
 
-df = pd.read_csv(os.path.join(BASE_DIR,'dataset/sample.csv'))
+df = pd.read_csv(os.path.join(BASE_DIR,'dataset/Alkanes.csv'))
 
 DrawingOptions.atomLabelFontSize = 55
 DrawingOptions.dotsPerAngstrom = 100
@@ -28,6 +28,8 @@ def imagegen(value):
 names = df['name']
 struct = df['structure']
 pairs = dict(zip(names, struct))
+
+
 	
 
 @app.route('/')
@@ -43,7 +45,7 @@ def selected():
 	if request.method == 'POST':
 		select = request.form
 		imagegen(select['compound'])
-		return render_template('index.html',pairs=pairs,img=f"{select['compound']}.svg")
+		return render_template('index.html',pairs=pairs,img=f"{select['compound']}.svg",df=df)
 	return render_template('index.html',pairs=pairs)
 
 

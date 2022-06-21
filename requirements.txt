@@ -4,7 +4,7 @@ Flask==1.1.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
-numpy==1.16.4
+numpy==1.22.0
 olefile==0.46
 pandas==0.24.2
 Pillow==6.2.0
